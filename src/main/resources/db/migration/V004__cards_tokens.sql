@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS cards_tokens
+(
+    card_id  BIGINT REFERENCES cards (id) ON DELETE CASCADE ON UPDATE CASCADE,
+    token_id BIGINT REFERENCES tokens (id) ON DELETE CASCADE ON UPDATE CASCADE,
+
+    PRIMARY KEY (card_id, token_id)
+);
