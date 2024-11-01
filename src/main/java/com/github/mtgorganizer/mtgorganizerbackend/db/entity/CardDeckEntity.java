@@ -32,4 +32,7 @@ public class CardDeckEntity {
     @ManyToOne
     @JoinColumn(name = "deck_id")
     private DeckEntity deck;
+
+    @Column(name = "number_of_cards", nullable = false)
+    private Long numberOfCards;
 }
