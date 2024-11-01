@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS parmanent_counters
+CREATE TABLE IF NOT EXISTS permanent_counters
 (
     id         BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name       VARCHAR UNIQUE NOT NULL,
