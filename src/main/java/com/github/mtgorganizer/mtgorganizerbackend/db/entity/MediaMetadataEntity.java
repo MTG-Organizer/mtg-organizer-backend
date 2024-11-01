@@ -35,4 +35,10 @@ public class MediaMetadataEntity {
 
     @OneToOne(mappedBy = "picture")
     private PermanentCounterEntity permanentCounter;
+
+    @OneToOne(mappedBy = "picture")
+    private PlayerCounterEntity playerCounter;
+
+    @OneToOne(mappedBy = "picture")
+    private EmblemEntity emblem;
 }
