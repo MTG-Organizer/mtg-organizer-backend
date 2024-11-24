@@ -7,7 +7,7 @@
 
 * JPA сущности конвертируются в сущности бизнес логики через библиотеку MapStruct (пакет common.converter)
 
-# Как юзать
+# Как юзать (докер файла нет, всё руками)
 1. Установить PostgreSQL:
 ```
    sudo apt-get install lsb-release
