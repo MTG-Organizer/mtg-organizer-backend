@@ -1,7 +1,7 @@
 package com.github.mtgorganizer.mtgorganizerbackend.common.converter;
 
-import com.github.mtgorganizer.mtgorganizerbackend.core.model.card.ExtendedCardModel;
-import com.github.mtgorganizer.mtgorganizerbackend.core.model.card.SimpleCardModel;
+import com.github.mtgorganizer.mtgorganizerbackend.core.model.ExtendedCardModel;
+import com.github.mtgorganizer.mtgorganizerbackend.core.model.SimpleCardModel;
 import com.github.mtgorganizer.mtgorganizerbackend.db.entity.CardEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;
