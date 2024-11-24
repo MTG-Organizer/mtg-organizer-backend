@@ -27,4 +27,4 @@ ALTER USER postgres PASSWORD 'postgres';
 java --version
 mvn --version
 ```
-4. Запустить: `mvn spring-boot:run` (за `.env` файлом в ЛС)
+4. Запустить: `mvn spring-boot:run` (за `.env` файлом в ЛС в ТГ @sysfutex)
