@@ -8,6 +8,7 @@
 * JPA сущности конвертируются в сущности бизнес логики через библиотеку MapStruct (пакет common.converter)
 
 # Как юзать (докер файла нет, всё руками)
+
 1. Установить PostgreSQL:
 ```
    sudo apt-get install lsb-release
@@ -16,15 +17,19 @@
    sudo apt-get update
    sudo apt-get -y install postgresql
    ```
+
 2. Изменить пароль у пользователя `postgres`:
 ```
 sudo -u postgres psql
 ALTER USER postgres PASSWORD 'postgres';
 ```
+
 3. Создать БД `mtg_organizer`: `CREATE DATABASE mtg_organizer;`
-3. Проверить, что установлены Java 21 и Maven 3.9.9:
+
+4. Проверить, что установлены Java 21 и Maven 3.9.9:
 ```
 java --version
 mvn --version
 ```
-4. Запустить: `mvn spring-boot:run` (за `.env` файлом в ЛС в ТГ @sysfutex)
+
+5. Запустить: `mvn spring-boot:run` (за `.env` файлом в ЛС в ТГ @sysfutex)
