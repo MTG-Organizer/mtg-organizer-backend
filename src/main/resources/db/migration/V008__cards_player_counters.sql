@@ -5,3 +5,9 @@ CREATE TABLE IF NOT EXISTS cards_player_counters
 
     PRIMARY KEY (card_id, player_counter_id)
 );
+
+INSERT INTO cards_player_counters (card_id, player_counter_id)
+VALUES (11, 1),
+       (12, 2),
+       (13, 3),
+       (14, 4);

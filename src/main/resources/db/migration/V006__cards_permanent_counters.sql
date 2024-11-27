@@ -5,3 +5,10 @@ CREATE TABLE IF NOT EXISTS cards_permanent_counters
 
     PRIMARY KEY (card_id, permanent_counter_id)
 );
+
+INSERT INTO cards_permanent_counters(card_id, permanent_counter_id)
+VALUES (6, 1),
+       (7, 2),
+       (8, 3),
+       (9, 4),
+       (10, 5);

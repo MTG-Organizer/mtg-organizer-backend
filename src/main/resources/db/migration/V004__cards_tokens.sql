@@ -5,3 +5,10 @@ CREATE TABLE IF NOT EXISTS cards_tokens
 
     PRIMARY KEY (card_id, token_id)
 );
+
+INSERT INTO cards_tokens(card_id, token_id)
+VALUES (1, 1),
+       (2, 2),
+       (3, 3),
+       (4, 4),
+       (5, 5);
