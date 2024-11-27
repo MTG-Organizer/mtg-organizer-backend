@@ -10,3 +10,5 @@ INSERT INTO decks (name) VALUES ('blink');
 INSERT INTO decks (name) VALUES ('nice');
 INSERT INTO decks (name) VALUES ('destroyment');
 INSERT INTO decks (name) VALUES ('aaaaaa');
+
+INSERT INTO decks (name) VALUES ('AllCardsDeck');
