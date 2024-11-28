@@ -27,6 +27,11 @@ public class CardController {
         return ResponseEntity.ok(cardService.postPlacingCard(card));
     }
 
+    @GetMapping("/hello")
+    public ResponseEntity<String> sayHello() {
+        return ResponseEntity.ok("hello_world");
+    }
+
     @GetMapping("/permeditcards/")
     public ResponseEntity<List<SimpleCardModel>> permGetCards() {
         return ResponseEntity.ok(cardService.getAll());
