@@ -38,4 +38,10 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/mtg-organizer-backend:latest
             docker stop mtg-backend || true
             docker rm mtg-backend || true
-            docker run -d --name mtg-backend -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/mtg-organizer-backend:latest
+            docker run -d --name mtg-backend -p 8080:8080 \
+              -e DB_HOST=${{ secrets.DB_HOST }} \
+              -e DB_PORT=${{ secrets.DB_PORT }} \
+              -e DB_NAME=${{ secrets.DB_NAME }} \
+              -e DB_USER=${{ secrets.DB_USER }} \
+              -e DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
+              ${{ secrets.DOCKER_USERNAME }}/mtg-organizer-backend:latest
