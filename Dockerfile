@@ -1,18 +1,19 @@
-FROM gradle:8.7-jdk17 AS builder
+FROM maven:3.9.5-eclipse-temurin-17 AS builder
 WORKDIR /app
 
-COPY build.gradle settings.gradle gradle.properties /app/
-COPY gradle /app/gradle
+COPY pom.xml ./
+COPY .mvn/ .mvn/
+COPY mvnw ./
+RUN ./mvnw dependency:resolve
 
-RUN gradle build --no-daemon || return 0
+COPY . .
 
-COPY . /app
-RUN gradle bootJar --no-daemon
+RUN ./mvnw clean package -DskipTests
 
 FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 
-COPY --from=builder /app/build/libs/*.jar app.jar
+COPY --from=builder /app/target/*.jar app.jar
 
 EXPOSE 8080
 
